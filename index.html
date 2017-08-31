@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar ">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="http://bulma.io">
+                    <img src="https://www.wsfcs.k12.nc.us/cms/lib/NC01001395/Centricity/Domain/8464/poetry%20logo%20transparent.png" alt="Poetry" >
+                  </a>
+      </div>
+
+
+
+      <div class="navbar-end">
+
+
+
+        <p class="control">
+
+          <button class="button is-primary" onclick="toggleModal()">
+                            <span class="icon">
+                              <i class="fa fa-file-text"></i>
+                            </span>
+                            <span>Add a poem!</span>
+                        </button>
+        </p>
+      </div>
+
+
+    </nav>
+    <div  id="Tiles">
+    
+       <div class="tile is-ancestor">
+
+      <div class="tile is-4  is-parent">
+
+        <article class="tile is-warning notification is-child">
+          <p class="title"> The Road Not Taken</p>
+          <p class="subtitle">Robert Frost</p>
+          <div class="content">
+            Two roads diverged in a yellow wood, <br> And sorry I could not travel both <br> And be one traveler, long I
+            stood <br> And looked down one as far as I could <br> To where it bent in the undergrowth; <br><br> Then took
+            the other, as just as fair, <br> And having perhaps the better claim, <br> Because it was grassy and wanted wear;
+            <br> Though as for that the passing there <br> Had worn them really about the same, <br> <br> And both that morning
+            equally lay <br> In leaves no step had trodden black. <br> Oh, I kept the first for another day! <br> Yet knowing
+            how way leads on to way, <br> I doubted if I should ever come back. <br> <br> I shall be telling this with a
+            sigh <br> Somewhere ages and ages hence: <br> Two roads diverged in a wood, and I— <br> I took the one less traveled
+            by, <br> And that has made all the difference.
+
+          </div>
+
+        </article>
+
+      </div>
+
+      </div>
+          
+          
+
+    </div>
+
+
+
+
+    <div class="modal" id="Modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" onclick="toggleModal()" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+          <div class="field">
+            <label class="label">Poem Name</label>
+            <div class="control">
+              <input class="input" id="poemName" type="text" placeholder="Poem">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Poet Name</label>
+            <div class="control">
+              <input class="input" id="poetName" type="text" placeholder="Poet">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control" id="tagCheckboxes">
+              <label class="checkbox">
+                                        <input type="checkbox" class="tag" value="Love">
+                                        Love
+                                      </label>
+              <label class="checkbox">
+                                          <input type="checkbox" class="tag" value="Happiness">
+                                          Happiness
+                                        </label>
+              <label class="checkbox">
+                                            <input type="checkbox" class="tag"  value="Sadness">
+                                            Sadness
+                                          </label>
+              <label class="checkbox">
+                                            <input type="checkbox" class="tag"  value="New Beginnings">
+                                            New Beginnings 
+                                          </label>
+              <label class="checkbox">
+                                              <input type="checkbox" class="tag"  value="Nostalgia">
+                                              Nostalgia 
+                                            </label>
+              <label class="checkbox">
+                                                <input type="checkbox" class="tag"  value="Heartbreak">
+                                                Heartbreak 
+                                              </label>
+              <label class="checkbox">
+                                                  <input type="checkbox" class="tag"  value="Death">
+                                                  Death
+                                                </label>
+
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Poem</label>
+            <div class="control">
+              <textarea class="textarea" id="realPoem" placeholder="Write peom here."></textarea>
+            </div>
+          </div>
+
+
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" onclick="createPoem()">Save changes</button>
+          <button class="button" onclick="toggleModal()">Cancel</button>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+
+</body>
+
+</html>
